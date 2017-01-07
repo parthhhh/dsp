@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and Sets are both sequence of objects. List keeps the order and can have repeated values, whereas sets will ignore repeated values and just keep one instance of it. Sets require values to be hashable and therefore are quicker. 
 
 ---
 
