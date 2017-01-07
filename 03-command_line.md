@@ -51,7 +51,8 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > xargs command can take the output of one command as an input to another command. It is used when there are issues with the piping command and when the user wants to repedeatly execute a certain command. one example of it is: ls | xargs -n 5 echo
+This will list the files in the current directory and will display five entries on each line at a time. 
 
  
 
