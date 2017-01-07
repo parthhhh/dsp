@@ -24,7 +24,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > `ls` - Lists files in the current working directory that are not hidden  
+`ls -a`  - Lists all files including the hidden ones in the current working directory
+`ls -l`  - Lists files in the current working directory in the long format
+`ls -lh` - Lists files in long format and human readable file sizes
+`ls -lah` - Lists all files in long format with human readable file sizes
+`ls -t`  - Lists files by modification time
+`ls -Glp` - Lists files in long format with display of grouping information and appends "/" indicator to entry.
 
 ---
 
@@ -34,6 +40,11 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 > > REPLACE THIS TEXT WITH YOUR RESPONSE
 
+-a 
+-t
+-m 
+-l 
+-d
 ---
 
 ###Q4.  Xargs   
