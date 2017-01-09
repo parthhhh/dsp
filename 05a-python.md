@@ -47,10 +47,9 @@ Here is a comparison between map and filter vs. list comprehenstion, both of whi
 numbers = range(1,50,1)
 map_filter= map(lambda n: n * 2, filter(lambda n: n % 2 == 1, numbers))
 list_comprehension = [n * 2 for n in numbers if n % 2 == 1]
-Set comprehensions and dictionary comprehensions work just like list comprehesnsions. Following are examples of set comprehension and dictionary comprehension, respectively. 
-x = {i**2 for i in range(10)}
+Set comprehensions and dictionary comprehensions work just like list comprehesnsions. Following are examples of set comprehension and dictionary comprehension, respectively.
+x = {i**2 for i in range(10)} 
 x = {i:i**2 for i in range(10)}
-
 ---
 
 ###Complete the following problems by editing the files below:
