@@ -3,12 +3,12 @@
 
 
 def donuts(count):
+
     """
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
     'many' instead of the actual count.
-
     >>> donuts(4)
     'Number of donuts: 4'
     >>> donuts(9)
@@ -18,6 +18,11 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
+    if count >= 10:
+        print('Number of donuts: many')
+    else:
+        print('Number of donuts: ' + str(count))
+
     raise NotImplementedError
 
 
@@ -28,6 +33,7 @@ def both_ends(s):
     However, if the string length is less than 2, return instead the
     empty string.
 
+
     >>> both_ends('spring')
     'spng'
     >>> both_ends('Hello')
@@ -37,6 +43,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
+    if len(s) < 2:
+        return ''
+    else:
+        print(s[:2]+s[-2:])
     raise NotImplementedError
 
 
@@ -56,6 +66,15 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
+    result = []
+    c = s[0]
+    result.append(c)
+    for j in s[1:]:
+        if j <> c:
+            result.append(j)
+        else:
+            result.append('*')
+    print(''.join(map(str, result)))
     raise NotImplementedError
 
 
@@ -74,6 +93,17 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
+    newb = a[:2]
+    newa = b[:2]
+    astr = []
+    bstr = []
+    astr.append(newa)
+    bstr.append(newb)
+    for j in a[2:]:
+            astr.append(j)
+    for i in b[2:]:
+            bstr.append(i)
+    print(''.join(map(str,astr)), ''.join(map(str,bstr)))
     raise NotImplementedError
 
 
@@ -91,6 +121,19 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
+    newstr = []
+    if len(s) < 3:
+        print (s)
+    else:
+        if s[-3:] == 'ing':
+            for i in s:
+                newstr.append(i)
+            newstr.append('ly')
+        else:
+            for j in s:
+                newstr.append(j)
+            newstr.append('ing')
+    print(''.join(map(str,newstr)))
     raise NotImplementedError
 
 
@@ -111,6 +154,15 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
+    if 'not' not in s or 'bad' not in s:
+        print(s)
+    else:
+        badword = s.find('bad')
+        notword = s.find('not')
+        if notword < badword:
+            print(s.replace(s[notword:badword+3], 'good'))
+        else:
+            print(s)
     raise NotImplementedError
 
 
@@ -130,4 +182,23 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
+
+    achar = len(a)
+    bchar = len(b)
+    if achar % 2 == 0:
+        afront = a[:achar/2]
+        aback = a[achar/2:]
+    else:
+        afront = a[:((achar/2)+1)]
+        aback = a[((achar/2)+1):]
+
+
+    if bchar % 2 == 0:
+        bfront = b[:bchar/2]
+        bback = b[bchar/2:]
+    else:
+        bfront = b[:((bchar/2)+1)]
+        bback = b[((bchar/2)+1):]
+    print(afront + bfront + aback + bback)
+
     raise NotImplementedError
